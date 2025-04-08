@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="svg/cloudy.png">
+  <link href="/src/styles.css" rel="stylesheet">
+  <title>Weather App</title>
+</head>
+
+<body>
+  <main
+    class="w-[300px] h-max min-h-[300px] bg-[#f7f7f7] rounded-2xl shadow-[0_30px_50px_rgba(85,85,85,0.2)] p-7 box-border m-5 flex flex-col items-center">
+
+    <form class="border border-[#5553] flex justify-between rounded-xl">
+      <input class="w-full outline-none p-2" spellcheck="false" type="text" autocomplete="off" id="valueSearch">
+      <button class="w-10 cursor-pointer pr-2">
+        <img class="w-full" src="svg/search.svg">
+      </button>
+    </form>
+
+    <section class="result pt-5 text-center">
+      <figure class="name font-bold text-2xl flex justify-center items-center gap-2">
+        <figcaption id="city">London</figcaption>
+        <img id="flag" src="https://flagsapi.com/GB/flat/32.png">
+      </figure>
+
+      <figure class="flex flex-col items-center">
+        <img id="weatherImg" class="w-[150px] drop-shadow-[0_10px_50px_#000]"
+          src="http://openweathermap.org/img/wn/10d@4x.png">
+
+        <figcaption class="text-5xl ">
+          <span id="temperature">31</span><sup>o</sup>
+        </figcaption>
+      </figure>
+
+      <p class="description font-bold text-lg">Overcast clouds</p>
+
+      <ul class="flex justify-between gap-2 mt-6">
+        <li class="li-style orange-bg">
+          <span>Clouds</span>
+          <img class="h-[1.75em] invert" src="svg/cloud.svg">
+          <span class="cloud">98%</span>
+        </li>
+
+        <li class="li-style purple-bg">
+          <span>Humidity</span>
+          <img class="h-[1.75em] invert" src="svg/droplet.svg">
+          <span class="humidity">55%</span>
+        </li>
+
+        <li class="li-style blue-bg">
+          <span>Pressure</span>
+          <img class="h-[1.75em] invert" src="svg/guage.svg">
+          <span class="pressure">1001hPa</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
